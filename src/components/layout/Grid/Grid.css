@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-gap: var(--gutter);
+}
+
+.grid + .grid {
+  margin-top: var(--small-gutter);
+}
+
+.grid > .grid {
+  margin-top: 0;
+}

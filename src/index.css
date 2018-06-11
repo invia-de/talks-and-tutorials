@@ -1,0 +1,17 @@
+#root {
+  min-height: 100vh;
+  padding-bottom: 230px;
+  position: relative;
+}
+
+@media (min-width: 460px) {
+  #root {
+    padding-bottom: 180px;
+  }
+}
+
+@media (min-width: 715px) {
+  #root {
+    padding-bottom: 140px;
+  }
+}

@@ -1,0 +1,13 @@
+.brand {
+  font-size: 1.375rem;
+  font-weight: 400;
+}
+
+.icon.brand__logo {
+  stroke-width: 0;
+  fill: currentColor;
+  vertical-align: bottom;
+  margin-right: var(--gutter);
+  width: 6rem;
+  height: 2.375rem;
+}

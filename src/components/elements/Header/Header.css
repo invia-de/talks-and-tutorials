@@ -1,0 +1,9 @@
+.header {
+  background: var(--primary);
+  color: var(--on-primary);
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4.8125rem;
+}

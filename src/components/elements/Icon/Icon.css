@@ -1,0 +1,30 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.icon--reload {
+  transition: transform 0.2s ease-in-out;
+}
+
+:focus .icon--reload,
+:hover .icon--reload {
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.icon--available {
+  fill: var(--positive);
+  stroke: var(--positive);
+}
+
+.icon--notAvailable {
+  fill: var(--negative);
+  stroke: var(--negative);
+}

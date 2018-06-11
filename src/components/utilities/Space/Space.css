@@ -1,0 +1,31 @@
+._mt {
+  margin-top: var(--gutter);
+}
+
+._mr {
+  margin-right: var(--gutter);
+}
+
+._ml {
+  margin-left: var(--gutter);
+}
+
+._mb {
+  margin-bottom: var(--gutter);
+}
+
+._mt--s {
+  margin-top: var(--small-gutter);
+}
+
+._mr--s {
+  margin-right: var(--small-gutter);
+}
+
+._ml--s {
+  margin-left: var(--small-gutter);
+}
+
+._mb--s {
+  margin-bottom: var(--small-gutter);
+}

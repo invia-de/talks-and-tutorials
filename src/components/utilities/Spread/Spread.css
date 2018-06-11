@@ -1,0 +1,9 @@
+.spread {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spread > * + * {
+  display: inline-block;
+  margin-left: 0.5rem;
+}

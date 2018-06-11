@@ -1,0 +1,40 @@
+.loading {
+  text-align: center;
+}
+
+.loading__message {
+  max-width: 20rem;
+}
+
+.loading__animation {
+  width: 1.375rem;
+  vertical-align: bottom;
+  margin-right: 1rem;
+}
+
+.loading__animation-circle {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 300;
+  stroke-width: 1em;
+  stroke-miterlimit: 15;
+  stroke-linecap: square;
+  transform-origin: center center;
+  animation: loading 2s linear infinite;
+  stroke: var(--primary);
+  fill: transparent;
+}
+
+.button .loading__animation-circle {
+  stroke: currentColor;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+    stroke-dashoffset: 0;
+  }
+  100% {
+    transform: rotate(360deg);
+    stroke-dashoffset: -600;
+  }
+}

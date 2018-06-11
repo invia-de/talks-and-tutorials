@@ -1,0 +1,55 @@
+{
+  "videos": [
+    {
+      "id": 0,
+      "url": "https://www.youtube.com/watch?v=vFU9FkaAfdc",
+      "title":
+        "Kubernetes Deconstructed: Understanding Kubernetes by Breaking It Down",
+      "speaker": ["Carson Anderson"],
+      "tags": ["kubernetes"]
+    },
+    {
+      "id": 2,
+      "url": "https://www.youtube.com/watch?v=AbgsfeGvg3E",
+      "title": "Old Is the New New",
+      "speaker": ["Kevlin Henney"],
+      "tags": ["architecture"]
+    },
+    {
+      "id": 3,
+      "url": "https://www.youtube.com/watch?v=SdUewLCHWvU",
+      "title": "A Crystal Ball to Prioritize Technical Debt",
+      "speaker": ["Adam Tornhill"],
+      "tags": ["golang"]
+    },
+    {
+      "id": 4,
+      "url": "https://www.youtube.com/watch?v=GccUVCI5TkM",
+      "title": "OpenTracing with Jaeger",
+      "speaker": ["Jason Newman"],
+      "tags": ["tracing"]
+    },
+    {
+      "id": 5,
+      "url": "https://www.youtube.com/watch?v=tpspO9K28PM",
+      "title": "Four Distributed Systems Architectural Patterns",
+      "speaker": ["Tim Berglund"],
+      "tags": ["architecture"]
+    },
+    {
+      "id": 6,
+      "url": "https://www.youtube.com/watch?v=YPbGW3Fnmbc",
+      "title":
+        "Using sagas to maintain data consistency in a microservice architecture",
+      "speaker": ["Chris Richardson"],
+      "tags": ["microservice", "architecture"]
+    },
+    {
+      "id": 7,
+      "url": "https://www.youtube.com/watch?v=4KVOuQDIfmw",
+      "title": "Microservice Websites",
+      "speaker": ["Gustaf Nilsson Kotte"],
+      "tags": ["microservice", "front-end", "performance"]
+    }
+  ]
+}

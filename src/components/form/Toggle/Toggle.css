@@ -1,0 +1,66 @@
+.toggle {
+  display: inline-block;
+  border-radius: 0;
+  margin: 0;
+  padding: 0 0 0 3rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.3333;
+  height: 1.5rem;
+  position: relative;
+  vertical-align: bottom;
+}
+
+.toggle__icon:before,
+.toggle__icon:after {
+  content: '';
+  display: block;
+  pointer-events: none;
+  position: absolute;
+}
+
+.toggle__icon:before {
+  border-radius: 10px;
+  height: 1.125rem;
+  background-color: var(--negative);
+  width: 2.25rem;
+  top: 0.1875rem;
+  left: 0;
+  transition: background-color 0.15s ease;
+}
+
+.toggle__icon:after {
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--white);
+  top: 0.25rem;
+  left: 0.0625rem;
+  transition: left 0.15s ease;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.toggle__input:checked + .toggle__icon:before {
+  background-color: var(--positive);
+}
+
+.toggle__input:checked + .toggle__icon:after {
+  left: 1.1875rem;
+}
+
+.toggle--disabled {
+  opacity: 0.33;
+  cursor: not-allowed;
+}
+
+.toggle--disabled .toggle__input {
+  cursor: not-allowed;
+}
+
+.toggle--standalone {
+  padding-left: 2.25rem;
+}

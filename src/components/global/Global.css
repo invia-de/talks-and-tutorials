@@ -1,0 +1,73 @@
+:root {
+  /* main colors mainly used for backgrounds */
+
+  /* brand colors */
+  --primary: #009ada;
+  --dark-primary: #104a70;
+  --secondary: #fdbf2c;
+  --dark-secondary: #ff8401;
+  /* greyscales */
+  --white: #fff;
+  --light-grey: #f2f2f2;
+  --grey: #d7d7d7;
+  --dark-grey: #6c6b6b;
+  /* feelings */
+  --positive: #039500;
+  --negative: #e54b85;
+  --warning: #fdbf2c;
+
+  /* special values */
+  --focus: var(--primary);
+
+  /* used for color property */
+  --on-primary: var(--white);
+  --on-dark-primary: var(--white);
+  --on-secondary: var(--white);
+  --on-dark-secondary: var(--white);
+  --on-white: var(--dark-primary);
+  --on-light-grey: var(--dark-primary);
+  --on-grey: var(--dark-primary);
+  --on-dark-grey: var(--white);
+  --on-positive: var(--white);
+  --on-negative: var(--white);
+  --on-warning: var(--white);
+
+  /* gutters for spacing */
+  --gutter: 1.25rem;
+  --small-gutter: 0.625rem;
+  --negative-gutter: -1.25rem;
+  --negative-small-gutter: -0.625rem;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--focus);
+}
+
+html {
+  font-family: Arial, sans-serif;
+  color: var(--on-light-grey);
+  font-size: 1em; /* ~16px */
+  line-height: 1.4;
+  background: var(--light-grey);
+}
+
+img {
+  max-width: 100%;
+}
+
+a,
+a:active {
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--dark-primary);
+}

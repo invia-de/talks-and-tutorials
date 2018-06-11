@@ -1,0 +1,38 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: var(--gutter);
+  background: var(--white);
+  box-shadow: 1px 1px 1px 0 var(--grey);
+  border-radius: 0px;
+  border-top: 1rem solid var(--grey);
+  overflow: hidden;
+}
+
+.card__title {
+  margin: var(--negative-gutter) 0 var(--gutter) var(--negative-gutter);
+  width: calc(100% + calc(2 * var(--gutter)));
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.35;
+  flex-grow: 3;
+  padding: var(--small-gutter) var(--gutter);
+}
+
+.architecture {
+  border-top-color: var(--dark-grey);
+}
+
+.kubernetes {
+  border-top-color: #436ce6;
+}
+
+.golang {
+  border-top-color: #74cede;
+}
+
+.front-end {
+  border-top-color: #f1e05a;
+}
