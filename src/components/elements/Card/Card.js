@@ -7,10 +7,13 @@ import Space from '../../utilities/Space/Space';
 import Toggle from '../../form/Toggle/Toggle';
 import Spread from '../../utilities/Spread/Spread';
 
-export default function Card({ onChange, id, title, url, tags, favorite }) {
+export default function Card({ onChange, id, title, url, tags, favorite, person }) {
   return (
     <div className={'card ' + tags.join(' ')}>
-      <h2 className="card__title">{title}</h2>
+      <h2 className="card__title">
+        {title}
+        <small className="card__person">{person}</small>
+        </h2>
 
       <Spread>
         <Toggle
@@ -27,7 +30,7 @@ export default function Card({ onChange, id, title, url, tags, favorite }) {
             rel="noopener noreferrer"
             href={url}
           >
-            to the video
+           open
             <Space left small>
               <Icon manner="outbound" />
             </Space>
