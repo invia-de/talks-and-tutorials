@@ -11,14 +11,17 @@ import Select from './components/form/Select/Select';
 import Section from './components/layout/Section/Section';
 import Toggle from './components/form/Toggle/Toggle';
 
-import { videos } from './videos.json';
+import { videos } from './sourcesVideos.json';
+import { articles } from './sourcesArticles.json';
 
 export default class App extends React.Component {
   constructor() {
     super();
 
+    const sources = [].concat(articles, videos);
+
     this.state = {
-      videos: videos,
+      sources: sources,
       filter: {}
     };
 
@@ -31,9 +34,9 @@ export default class App extends React.Component {
     try {
       favs = JSON.parse(localStorage.getItem('favorites') || '[]');
       this.setState(prevState => ({
-        videos: prevState.videos.map(video => {
-          video.favorite = !!~favs.indexOf('' + video.id);
-          return video;
+        sources: prevState.sources.map(source => {
+          source.favorite = !!~favs.indexOf('' + source.id);
+          return source;
         })
       }));
     } catch (error) {
@@ -69,24 +72,25 @@ export default class App extends React.Component {
     }
   }
 
-  extractInformation(videos) {
+  extractInformation(sourceArray) {
     let tags = {};
-    let speaker = {};
+    let person= {};
 
-    videos.forEach(video => {
-      video.tags.forEach(
+    sourceArray.forEach(source => {
+      source.tags.forEach(
         tagName => (tags[tagName] = tags[tagName] ? tags[tagName] + 1 : 1)
       );
-      video.speaker.forEach(speakerName => (speaker[speakerName] = 0));
+
+      source.person.forEach(personName => (person[personName] = 0));
     });
 
     return {
       tags: tags,
-      speaker: Object.keys(speaker)
+      person: Object.keys(person)
     };
   }
 
-  applyFilter(video) {
+  applyFilter(source) {
     const filter = this.state.filter;
     const filterBy = Object.keys(filter);
 
@@ -95,7 +99,7 @@ export default class App extends React.Component {
     filterBy.some(filterName => {
       if (Array.isArray(filter[filterName])) {
         filter[filterName].forEach(filterValue => {
-          if (!~video[filterName.replace('[]', '')].indexOf(filterValue)) {
+          if (!~source[filterName.replace('[]', '')].indexOf(filterValue)) {
             bool = false;
             return true;
           }
@@ -104,11 +108,9 @@ export default class App extends React.Component {
         typeof filter[filterName] === 'boolean' &&
         filter[filterName]
       ) {
-        bool = !!video[filterName];
-      } else {
-        if (filter[filterName]) {
-          bool = !!~video[filterName].indexOf(filter[filterName]);
-        }
+        bool = !!source[filterName];
+      } else if (filter[filterName]) {
+        bool = !!~source[filterName].indexOf(filter[filterName]);
       }
 
       if (!bool) return true;
@@ -119,16 +121,16 @@ export default class App extends React.Component {
   }
 
   render() {
-    let videos = this.state.videos;
-    let filteredVideos = videos && videos.filter(this.applyFilter);
-    let data = videos && this.extractInformation(videos);
+    const sources= this.state.sources;
+    const data = sources && this.extractInformation(sources);
+    const filteredSources = sources && sources.filter(this.applyFilter);
 
     return (
       <React.Fragment>
         <Header>
           <Brand name="Talks and Tutorials" />
         </Header>
-        {videos !== null ? (
+        {sources !== null ? (
           <main>
             <Space top bottom left right>
               <Grid columns="300px 1fr" style={{ alignItems: 'self-start' }}>
@@ -136,12 +138,12 @@ export default class App extends React.Component {
                   <Section headline="Filter">
                     <Grid columns="1fr">
                       <Select
-                        name="speaker"
-                        label="Speaker"
+                        name="person"
+                        label="Person"
                         onChange={this.handleChange}
-                        options={data.speaker.map(speakerName => ({
-                          value: speakerName,
-                          name: speakerName
+                        options={data.person.map(personName => ({
+                          value: personName,
+                          name: personName
                         }))}
                       />
                       <Toggle
@@ -173,7 +175,7 @@ export default class App extends React.Component {
                   </Section>
                 )}
                 <Grid columns="repeat(auto-fill, minmax(300px, 1fr))">
-                  {filteredVideos.map(({ id, ...rest }) => (
+                  {filteredSources.map(({ id, ...rest }) => (
                     <Card
                       key={id}
                       id={id}
@@ -183,14 +185,14 @@ export default class App extends React.Component {
                         let checked = e.target.checked;
                         this.setState(
                           prevState => ({
-                            videos: prevState.videos.map(video => {
-                              if (video.id === +id) {
+                            sources: prevState.sources.map(source => {
+                              if (source.id === +id) {
                                 return {
-                                  ...video,
+                                  ...source,
                                   favorite: checked
                                 };
                               }
-                              return video;
+                              return source;
                             })
                           }),
                           () => {

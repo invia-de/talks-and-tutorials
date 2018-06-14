@@ -21,6 +21,17 @@
   padding: var(--small-gutter) var(--gutter);
 }
 
+.card__person {
+  display: block;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--dark-grey);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .architecture {
   border-top-color: var(--dark-grey);
 }
@@ -35,4 +46,8 @@
 
 .front-end {
   border-top-color: #f1e05a;
+}
+
+.javascript {
+  border-top-color: yellow;
 }
