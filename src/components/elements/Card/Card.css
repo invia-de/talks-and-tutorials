@@ -1,61 +1,122 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
   padding: var(--gutter);
   background: var(--white);
-  box-shadow: 1px 1px 1px 0 var(--grey);
-  border-radius: 0px;
-  border-top: 1rem solid var(--grey);
-  overflow: hidden;
+  box-shadow: 0 2px 4px -1px var(--grey);
+  border-radius: 3px;
+  font-size: 0.875rem;
+  margin-bottom: var(--small-gutter);
+  display: grid;
+  grid-template-columns: 1.25rem 1fr 1fr;
+  grid-gap: 1.75rem;
+  align-items: self-start;
+  grid-row-gap: 0.625rem;
+}
+
+.card .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.card .button--action {
+  color: var(--grey);
+  grid-column-start: 2;
+}
+
+.card .button--action:hover,
+.card .button--action:focus {
+  color: var(--dark-grey);
+}
+
+.card .button.button--active {
+  color: var(--negative);
 }
 
 .card__title {
-  margin: var(--negative-gutter) 0 var(--gutter) var(--negative-gutter);
-  width: calc(100% + calc(2 * var(--gutter)));
+  margin: 0;
   font-size: 1.375rem;
-  font-weight: 400;
-  line-height: 1.35;
+  font-weight: bold;
+  line-height: 1.1;
   flex-grow: 3;
-  padding: var(--small-gutter) var(--gutter);
+  grid-column-end: span 2;
+}
+
+.card__title a {
+  text-decoration: none;
+  color: var(--dark-primary);
 }
 
 .card__person {
-  display: block;
-  font-size: 0.75rem;
-  font-style: italic;
+  font-weight: 400;
+  font-size: 0.875rem;
+  display: inline-block;
   color: var(--dark-grey);
+}
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.card__tags {
+  grid-column: 2 / span 3;
+  grid-row-start: 2;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  font-size: 0.875rem;
+  padding-left: 2px;
+}
+
+.card__link {
+  justify-self: center;
+}
+
+.card__tags__element {
+  background: #d6d6d6;
+  margin-right: 0.3125rem;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
 }
 
 .architecture {
-  border-top-color: var(--dark-grey);
+  background-color: var(--dark-grey);
+  color: var(--on-dark-grey);
 }
 
 .kubernetes {
-  border-top-color: #436ce6;
+  background-color: #436ce6;
+  color: var(--white);
 }
 
 .golang {
-  border-top-color: #74cede;
+  background-color: #74cede;
+  color: var(--white);
 }
 
 .front-end {
-  border-top-color: #2dbf80;
+  background-color: #2dbf80;
+  color: var(--white);
 }
 
 .css {
-  border-top-color: #9c27b0;
+  background-color: #9c27b0;
+  color: var(--white);
 }
 
 .html {
-  border-top-color: #e44d26;
+  background-color: #e44d26;
+  color: var(--white);
 }
 
 .javascript {
-  border-top-color: #f1e05a;
+  background-color: #f1e05a;
+  color: #111;
+}
+
+@media (min-width: 900px) {
+  .card {
+    grid-template-columns: 1.25rem minmax(30ch, 1fr) 1.75rem 1.25rem;
+  }
+  .card__title {
+    grid-column-end: span 1;
+  }
+  .card .button--action {
+    grid-column-start: auto;
+  }
 }

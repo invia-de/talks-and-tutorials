@@ -18,7 +18,11 @@ export default class App extends React.Component {
   constructor() {
     super();
 
-    const sources = [].concat(articles, videos);
+    const sources = [].concat(articles, videos).sort((a, b) => {
+      if (a.title > b.title) return 1;
+      if (a.title < b.title) return -1;
+      return 0;
+    });
 
     this.state = {
       sources: sources,
@@ -32,10 +36,13 @@ export default class App extends React.Component {
   componentDidMount() {
     let favs;
     try {
-      favs = JSON.parse(localStorage.getItem('favorites') || '[]');
+      favs = JSON.parse(localStorage.getItem('favorites') || '[]').map(fav =>
+        parseInt(fav)
+      );
+
       this.setState(prevState => ({
         sources: prevState.sources.map(source => {
-          source.favorite = !!~favs.indexOf('' + source.id);
+          source.favorite = !!~favs.indexOf(source.id);
           return source;
         })
       }));
@@ -64,17 +71,25 @@ export default class App extends React.Component {
         }
       }));
     } else {
-      this.setState(({ filter }) => ({
-        filter: {
-          [name]: (filter[name] || []).filter(prevVal => prevVal !== val)
-        }
-      }));
+      if (name === 'url') {
+        this.setState(({ filter }) => ({
+          filter: {
+            [name]: val
+          }
+        }));
+      } else {
+        this.setState(({ filter }) => ({
+          filter: {
+            [name]: (filter[name] || []).filter(prevVal => prevVal !== val)
+          }
+        }));
+      }
     }
   }
 
   extractInformation(sourceArray) {
     let tags = {};
-    let person= {};
+    let person = {};
 
     sourceArray.forEach(source => {
       source.tags.forEach(
@@ -109,6 +124,11 @@ export default class App extends React.Component {
         filter[filterName]
       ) {
         bool = !!source[filterName];
+      } else if (filterName === 'url' && filter[filterName]) {
+        bool =
+          filter[filterName] === '*'
+            ? !~source[filterName].indexOf('youtube.com')
+            : !!~source[filterName].indexOf('youtube.com');
       } else if (filter[filterName]) {
         bool = !!~source[filterName].indexOf(filter[filterName]);
       }
@@ -121,7 +141,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const sources= this.state.sources;
+    const sources = this.state.sources;
     const data = sources && this.extractInformation(sources);
     const filteredSources = sources && sources.filter(this.applyFilter);
 
@@ -145,6 +165,21 @@ export default class App extends React.Component {
                           value: personName,
                           name: personName
                         }))}
+                      />
+                      <Select
+                        name="url"
+                        label="Type"
+                        onChange={this.handleChange}
+                        options={[
+                          {
+                            value: 'youtube.com',
+                            name: 'Video'
+                          },
+                          {
+                            value: '*',
+                            name: 'Article'
+                          }
+                        ]}
                       />
                       <Toggle
                         value="1"
@@ -174,22 +209,22 @@ export default class App extends React.Component {
                     </Grid>
                   </Section>
                 )}
-                <Grid columns="repeat(auto-fill, minmax(300px, 1fr))">
+                <div>
                   {filteredSources.map(({ id, ...rest }) => (
                     <Card
                       key={id}
                       id={id}
                       {...rest}
-                      onChange={e => {
-                        let id = e.target.value;
-                        let checked = e.target.checked;
+                      onClick={() => {
+                        const isFav = rest.favorite;
+                        const cardId = id;
                         this.setState(
                           prevState => ({
                             sources: prevState.sources.map(source => {
-                              if (source.id === +id) {
+                              if (source.id === cardId) {
                                 return {
                                   ...source,
-                                  favorite: checked
+                                  favorite: !isFav
                                 };
                               }
                               return source;
@@ -200,10 +235,10 @@ export default class App extends React.Component {
                               let favs = JSON.parse(
                                 localStorage.getItem('favorites') || '[]'
                               );
-                              if (checked) {
-                                favs.push(id);
+                              if (!isFav) {
+                                favs.push(cardId);
                               } else {
-                                favs = favs.filter(fav => fav !== id);
+                                favs = favs.filter(fav => fav !== cardId);
                               }
                               window.localStorage.setItem(
                                 'favorites',
@@ -219,7 +254,7 @@ export default class App extends React.Component {
                       }}
                     />
                   ))}
-                </Grid>
+                </div>
               </Grid>
             </Space>
           </main>

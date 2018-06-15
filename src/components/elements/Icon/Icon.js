@@ -23,12 +23,16 @@ export default function Icon({ manner, viewBox, className, path, ...other }) {
       aria-hidden="true"
       {...other}
     >
-      <path d={path || icons[manner]} />
+      {Array.isArray(path) ? (
+        path.map((p, i) => <path key={i} d={p} />)
+      ) : (
+        <path d={path || icons[manner]} />
+      )}
     </svg>
   );
 }
 Icon.propTypes = {
-  path: PropTypes.string,
+  path: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   viewBox: PropTypes.string,
   manner: PropTypes.oneOf([
     'arrowDown',
