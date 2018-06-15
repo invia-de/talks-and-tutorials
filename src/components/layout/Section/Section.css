@@ -2,8 +2,9 @@
   background: var(--white);
   color: var(--on-white);
   padding: var(--gutter);
-  box-shadow: 1px 1px 1px 0 var(--grey);
+  box-shadow: 0 2px 4px -1px var(--grey);
   margin: 0 0 var(--gutter) 0;
+  border-radius: 3px;
 }
 
 .section:after {
