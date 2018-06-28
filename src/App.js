@@ -37,6 +37,7 @@ export default class App extends React.Component {
     let favs;
     try {
       favs = JSON.parse(localStorage.getItem('favorites') || '[]').map(fav =>
+        // eslint-disable-next-line
         parseInt(fav)
       );
 
@@ -158,6 +159,7 @@ export default class App extends React.Component {
                   <Section headline="Filter">
                     <Grid columns="1fr">
                       <Select
+                        emptyOption="Select a speaker/writer"
                         name="person"
                         label="Person"
                         onChange={this.handleChange}
@@ -167,6 +169,7 @@ export default class App extends React.Component {
                         }))}
                       />
                       <Select
+                        emptyOption="Select a type"
                         name="url"
                         label="Type"
                         onChange={this.handleChange}
