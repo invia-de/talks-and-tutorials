@@ -100,9 +100,16 @@ export default class App extends React.Component {
       source.person.forEach(personName => (person[personName] = 0));
     });
 
+    let orderedTags = {};
+    Object.keys(tags)
+      .sort()
+      .forEach(tag => {
+        orderedTags[tag] = tags[tag];
+      });
+
     return {
-      tags: tags,
-      person: Object.keys(person)
+      tags: orderedTags,
+      person: Object.keys(person).sort()
     };
   }
 
@@ -175,12 +182,12 @@ export default class App extends React.Component {
                         onChange={this.handleChange}
                         options={[
                           {
-                            value: 'youtube.com',
-                            name: 'Video'
-                          },
-                          {
                             value: '*',
                             name: 'Article'
+                          },
+                          {
+                            value: 'youtube.com',
+                            name: 'Video'
                           }
                         ]}
                       />
