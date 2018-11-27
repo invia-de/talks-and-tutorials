@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.d8e0e4b8.css",
-  "main.css.map": "static/css/main.d8e0e4b8.css.map",
-  "main.js": "static/js/main.2a5935ce.js",
-  "main.js.map": "static/js/main.2a5935ce.js.map"
+  "main.css": "/talks-and-tutorials/static/css/main.c07c2062.chunk.css",
+  "main.js": "/talks-and-tutorials/static/js/main.517ee8d6.chunk.js",
+  "main.js.map": "/talks-and-tutorials/static/js/main.517ee8d6.chunk.js.map",
+  "static/css/1.fc41c26e.chunk.css": "/talks-and-tutorials/static/css/1.fc41c26e.chunk.css",
+  "static/js/1.8d94aaa7.chunk.js": "/talks-and-tutorials/static/js/1.8d94aaa7.chunk.js",
+  "static/js/1.8d94aaa7.chunk.js.map": "/talks-and-tutorials/static/js/1.8d94aaa7.chunk.js.map",
+  "runtime~main.js": "/talks-and-tutorials/static/js/runtime~main.996758f4.js",
+  "runtime~main.js.map": "/talks-and-tutorials/static/js/runtime~main.996758f4.js.map",
+  "static/css/main.c07c2062.chunk.css.map": "/talks-and-tutorials/static/css/main.c07c2062.chunk.css.map",
+  "static/css/1.fc41c26e.chunk.css.map": "/talks-and-tutorials/static/css/1.fc41c26e.chunk.css.map",
+  "index.html": "/talks-and-tutorials/index.html",
+  "precache-manifest.bc47104318ff7174569819115b4916d5.js": "/talks-and-tutorials/precache-manifest.bc47104318ff7174569819115b4916d5.js",
+  "service-worker.js": "/talks-and-tutorials/service-worker.js"
 }
