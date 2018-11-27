@@ -4,10 +4,10 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "normalize.css": "^8.0.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "normalize.css": "8.0.1",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-scripts": "2.1.1"
   },
   "homepage": "http://invia-de.github.io/talks-and-tutorials",
   "scripts": {
@@ -20,11 +20,11 @@
     "deploy": "npm run build && gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0",
-    "husky": "^0.14.3",
-    "prettier": "^1.13.6",
-    "pretty-quick": "^1.4.1",
-    "webpack-bundle-analyzer": "^2.12.0"
+    "gh-pages": "2.0.1",
+    "husky": "1.2.0",
+    "prettier": "1.15.2",
+    "pretty-quick": "1.8.0",
+    "webpack-bundle-analyzer": "3.0.3"
   },
   "description": "We love conference talks and online learning materials. That's why we made this little and lovely front-end to collect videos that we find useful for us as developers.",
   "main": "src/index.js",
@@ -34,5 +34,11 @@
   },
   "bugs": {
     "url": "https://github.com/invia-de/talks-and-tutorials/issues"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
