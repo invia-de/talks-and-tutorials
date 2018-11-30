@@ -16,11 +16,9 @@
     "analyze": "node analyze.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged",
-    "deploy": "npm run build && gh-pages -d build"
+    "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
-    "gh-pages": "2.0.1",
     "husky": "1.2.0",
     "prettier": "1.15.2",
     "pretty-quick": "1.8.0",
