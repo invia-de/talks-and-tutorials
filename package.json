@@ -5,9 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "8.0.1",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
-    "react-scripts": "2.1.3"
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.0.1"
   },
   "homepage": "http://invia-de.github.io/talks-and-tutorials",
   "scripts": {
@@ -19,10 +19,10 @@
     "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
-    "husky": "1.3.1",
-    "prettier": "1.15.3",
-    "pretty-quick": "1.8.0",
-    "webpack-bundle-analyzer": "3.0.3"
+    "husky": "2.3.0",
+    "prettier": "1.17.1",
+    "pretty-quick": "1.11.0",
+    "webpack-bundle-analyzer": "3.3.2"
   },
   "description": "We love conference talks and online learning materials. That's why we made this little and lovely front-end to collect videos that we find useful for us as developers.",
   "main": "src/index.js",
