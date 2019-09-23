@@ -22,7 +22,7 @@
     "husky": "3.0.5",
     "prettier": "1.18.2",
     "pretty-quick": "1.11.1",
-    "webpack-bundle-analyzer": "3.5.0"
+    "webpack-bundle-analyzer": "3.5.1"
   },
   "description": "We love conference talks and online learning materials. That's why we made this little and lovely front-end to collect videos that we find useful for us as developers.",
   "main": "src/index.js",
