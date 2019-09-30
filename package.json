@@ -6,7 +6,7 @@
   "dependencies": {
     "normalize.css": "8.0.1",
     "react": "16.9.0",
-    "react-dom": "16.9.0",
+    "react-dom": "16.10.1",
     "react-scripts": "3.1.2"
   },
   "homepage": "http://invia-de.github.io/talks-and-tutorials",
