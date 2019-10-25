@@ -1,22 +1,22 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c613f6f677c7b2b31509866836f85c36",
+    "revision": "916d30fb77b71d9c6bdb8f861dbe6190",
     "url": "/talks-and-tutorials/index.html"
   },
   {
-    "revision": "6da64f4b4c1e904e67ad",
+    "revision": "d25f55df4a750c3a0b19",
     "url": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "0fa00e08b5e59daeee05",
-    "url": "/talks-and-tutorials/static/css/main.9982eb23.chunk.css"
+    "revision": "880cb2c70ce48de385fd",
+    "url": "/talks-and-tutorials/static/css/main.7c797293.chunk.css"
   },
   {
-    "revision": "6da64f4b4c1e904e67ad",
-    "url": "/talks-and-tutorials/static/js/2.f382a661.chunk.js"
+    "revision": "d25f55df4a750c3a0b19",
+    "url": "/talks-and-tutorials/static/js/2.ac4ef491.chunk.js"
   },
   {
-    "revision": "0fa00e08b5e59daeee05",
+    "revision": "880cb2c70ce48de385fd",
     "url": "/talks-and-tutorials/static/js/main.8dd5ca57.chunk.js"
   },
   {

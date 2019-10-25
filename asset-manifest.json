@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/talks-and-tutorials/static/css/main.9982eb23.chunk.css",
+    "main.css": "/talks-and-tutorials/static/css/main.7c797293.chunk.css",
     "main.js": "/talks-and-tutorials/static/js/main.8dd5ca57.chunk.js",
     "main.js.map": "/talks-and-tutorials/static/js/main.8dd5ca57.chunk.js.map",
     "runtime-main.js": "/talks-and-tutorials/static/js/runtime-main.7e689f10.js",
     "runtime-main.js.map": "/talks-and-tutorials/static/js/runtime-main.7e689f10.js.map",
     "static/css/2.764ccc25.chunk.css": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css",
-    "static/js/2.f382a661.chunk.js": "/talks-and-tutorials/static/js/2.f382a661.chunk.js",
-    "static/js/2.f382a661.chunk.js.map": "/talks-and-tutorials/static/js/2.f382a661.chunk.js.map",
+    "static/js/2.ac4ef491.chunk.js": "/talks-and-tutorials/static/js/2.ac4ef491.chunk.js",
+    "static/js/2.ac4ef491.chunk.js.map": "/talks-and-tutorials/static/js/2.ac4ef491.chunk.js.map",
     "index.html": "/talks-and-tutorials/index.html",
-    "precache-manifest.98f219da63228ef06fe4af215cf38c8e.js": "/talks-and-tutorials/precache-manifest.98f219da63228ef06fe4af215cf38c8e.js",
+    "precache-manifest.7c187b78619941a0748e02ff80ea7c2d.js": "/talks-and-tutorials/precache-manifest.7c187b78619941a0748e02ff80ea7c2d.js",
     "service-worker.js": "/talks-and-tutorials/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.9982eb23.chunk.css.map": "/talks-and-tutorials/static/css/main.9982eb23.chunk.css.map"
+    "static/css/main.7c797293.chunk.css.map": "/talks-and-tutorials/static/css/main.7c797293.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.7e689f10.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.f382a661.chunk.js",
-    "static/css/main.9982eb23.chunk.css",
+    "static/js/2.ac4ef491.chunk.js",
+    "static/css/main.7c797293.chunk.css",
     "static/js/main.8dd5ca57.chunk.js"
   ]
 }
