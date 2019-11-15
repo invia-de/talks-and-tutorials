@@ -6,10 +6,10 @@
     "runtime-main.js": "/talks-and-tutorials/static/js/runtime-main.7e689f10.js",
     "runtime-main.js.map": "/talks-and-tutorials/static/js/runtime-main.7e689f10.js.map",
     "static/css/2.764ccc25.chunk.css": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css",
-    "static/js/2.20163147.chunk.js": "/talks-and-tutorials/static/js/2.20163147.chunk.js",
-    "static/js/2.20163147.chunk.js.map": "/talks-and-tutorials/static/js/2.20163147.chunk.js.map",
+    "static/js/2.606742f9.chunk.js": "/talks-and-tutorials/static/js/2.606742f9.chunk.js",
+    "static/js/2.606742f9.chunk.js.map": "/talks-and-tutorials/static/js/2.606742f9.chunk.js.map",
     "index.html": "/talks-and-tutorials/index.html",
-    "precache-manifest.3b2a50935b2386d129fa97f71220b2aa.js": "/talks-and-tutorials/precache-manifest.3b2a50935b2386d129fa97f71220b2aa.js",
+    "precache-manifest.d15ddf0d398b263a30672b94393bb708.js": "/talks-and-tutorials/precache-manifest.d15ddf0d398b263a30672b94393bb708.js",
     "service-worker.js": "/talks-and-tutorials/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.7c797293.chunk.css.map": "/talks-and-tutorials/static/css/main.7c797293.chunk.css.map"
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.7e689f10.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.20163147.chunk.js",
+    "static/js/2.606742f9.chunk.js",
     "static/css/main.7c797293.chunk.css",
     "static/js/main.8dd5ca57.chunk.js"
   ]
