@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "af802a7aca22f4fbe78e01676bc562c4",
+    "revision": "8ad20061124ce1b7ecc3d6931fb94920",
     "url": "/talks-and-tutorials/index.html"
   },
   {
-    "revision": "b311d105afa024bb3529",
+    "revision": "6c96f7034e073b908106",
     "url": "/talks-and-tutorials/static/css/2.764ccc25.chunk.css"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/talks-and-tutorials/static/css/main.7c797293.chunk.css"
   },
   {
-    "revision": "b311d105afa024bb3529",
-    "url": "/talks-and-tutorials/static/js/2.b97f5a86.chunk.js"
+    "revision": "6c96f7034e073b908106",
+    "url": "/talks-and-tutorials/static/js/2.e7c3bc1e.chunk.js"
   },
   {
-    "revision": "e666d2d60c0f5d6398f074a3b13a79a0",
-    "url": "/talks-and-tutorials/static/js/2.b97f5a86.chunk.js.LICENSE.txt"
+    "revision": "5356fa2f66e46e6c05e4cbe319ac7f1d",
+    "url": "/talks-and-tutorials/static/js/2.e7c3bc1e.chunk.js.LICENSE.txt"
   },
   {
     "revision": "742de37d1d2b875b62f7",
