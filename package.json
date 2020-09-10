@@ -21,7 +21,7 @@
   "devDependencies": {
     "husky": "4.2.5",
     "prettier": "2.0.5",
-    "pretty-quick": "2.0.1",
+    "pretty-quick": "3.0.2",
     "webpack-bundle-analyzer": "3.7.0"
   },
   "description": "We love conference talks and online learning materials. That's why we made this little and lovely front-end to collect videos that we find useful for us as developers.",
